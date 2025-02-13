@@ -1,3 +1,5 @@
+import { Link }from 'react-router-dom';
+
 function Navbar() {
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -9,13 +11,13 @@ function Navbar() {
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <Link class="nav-link active" aria-current="page" to="/">Home</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                        <Link class="nav-link active" aria-current="page" to="/about">About</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Catalog</a>
+                        <Link class="nav-link active" aria-current="page" to="/catalog">Catalog</Link>
                     </li>
                     
                 </ul>

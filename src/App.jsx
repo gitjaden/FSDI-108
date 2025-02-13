@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
 import About from './pages/about'
 import Catalog from './pages/catalog'
@@ -12,20 +12,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Navbar/>
-      <h1>Online Store</h1>
-
-      <Home />
-      <About />
-      <Catalog />
-
-      <p>
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Navbar />
+    
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/catalog" element={<Catalog/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
